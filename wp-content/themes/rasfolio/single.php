@@ -16,7 +16,7 @@
             </div>
 
             <!--@@@@@@ Content Title @@@@@@-->
-            <h3 class="p-3">কো-পাইলট, আমাদের ভাত মেরে দিল! </h3>
+            <h3 class="p-3"><?php echo get_the_title(); ?></h3>
 
             <!-- @@@@@content head icon area @@@@@-->
             <div class="blog-content-info d-flex flex-row">
@@ -24,8 +24,14 @@
               <a href="#">
                 <img src="<?php echo get_template_directory_uri(); ?>./assect/img/rusulazomsumonProthomalo.png" width="24px" height="24px" class="rounded-circle" alt="Rusul Azom Sumon">
               </a>
-              <a href="#" class="pt-1">
-                <p>Rusul Azom Sumon</p>
+              <!-- author name linked -->
+              <?php
+                 $author_id = $post->post_author; 
+                 $author_url = get_the_author_meta('user_url',$author_id);
+                 $author_name =  get_the_author_meta('display_name', $author_id); 
+              ?>
+              <a href="<?php echo $author_url; ?>" class="pt-1">
+                <p><?php echo $author_name; ?></p>
               </a>
               <!-- date -->
               <div class="pub-date">
@@ -47,35 +53,11 @@
             <div class="blog-content-body">
               <!-- feature quote -->
               <hr class="vertical">
-              <q class="p-1">আজ থেকে ২০ বছর আগেও, অফিসের সব হিসেব করত, কেরানি। আজ তাঁর 
-                জায়গা নিয়েছে, HR Software
-
-              </q>
+              <q class="p-1">	<?php the_excerpt(); ?> </q>
               <hr class="vertical">
               <!-- Blog main content -->
               <div class="blog-main-content pt-3">
-                <p >আমার সোনার বাংলা
-                  আমি তোমায় ভালোবাসি।
-                  চিরদিন তোমার আকাশ, তোমার বাতাস
-                  আমার প্রাণে বাজায় বাঁশি।
-                  
-                  ও মা, ফাগুনে তোর আমের বনে
-                  ঘ্রাণে পাগল করে–
-                  (মরি হায়, হায় রে)
-                  ও মা, অঘ্রাণে তোর ভরা খেতে,
-                  (আমি) কি দেখেছি মধুর হাসি।।
-                  
-                  কী শোভা, কী ছায়া গো,
-                  কী স্নেহ, কী মায়া গো–
-                  কী আঁচল বিছায়েছ
-                  বটের মূলে, নদীর কূলে কূলে।।
-                  
-                  মা তোর মুখের বাণী
-                  আমার কানে লাগে
-                  সুধার মতো–
-                  (মরি হায়, হায় রে)
-                  মা, তোর বদনখানি মলিন হলে
-                  আমি নয়ন জলে ভাসি।।</p>
+                <?php the_content(); ?>
               </div>
             </div>
             <!-- blog content body content end -->
@@ -166,31 +148,32 @@
                 <div class="row d-flex mt-3">
                   <h5>এই জাতীয় আরও লেখাঃ-</h5>
                   <hr>
+                  <!-- content sourcing -->
+                  <?php 
+                      $args = array(
+                          'post_type'     =>  'post',
+                          'order'         =>  'DSC',
+                          'posts_per_page' =>  3
+                      );
+                      $query = new WP_Query($args);
+                      while($query -> have_posts()){
+                          $query -> the_post();
+                  ?>
                   <!-- Related post content -->
                   <div class="col-md-4  col-sm-12 post">
-                    <a href="#">
-                      <!-- post thumbnails -->
-                      <img src="<?php echo get_template_directory_uri(); ?>./assect/img/WebCoverRusulAzom.jpg" width="100%" alt="">
-                      <h5>দেভেলপারদের প্রয়জনিয় ওয়েবসাইট</h5>
+                    <a href="<?php the_permalink(); ?>">
+                        <!-- post thumbnails -->
+                        <img src="<?php the_post_thumbnail_url(); ?>" width="100%" height="200px" alt="">
+                                              
+                        <!-- post tile -->
+                        <h5><?php the_title(); ?></h5>
                     </a>
                   </div>
-                  <!-- Related post content -->
-                  <div class="col-md-4  col-sm-12 post">
-                    <a href="#">
-                      <!-- post thumbnails -->
-                      <img src="<?php echo get_template_directory_uri(); ?>./assect/img/WebCoverRusulAzom.jpg" width="100%" alt="">
-                      <h5>দেভেলপারদের প্রয়জনিয় ওয়েবসাইট</h5>
-                    </a>
-                  </div>
-                  <!-- Related post content -->
-                  <div class="col-md-4  col-sm-12 post">
-                    <a href="#">
-                      <!-- post thumbnails -->
-                      <img src="<?php echo get_template_directory_uri(); ?>./assect/img/WebCoverRusulAzom.jpg" width="100%" alt="">
-                      <h5>দেভেলপারদের প্রয়জনিয় ওয়েবসাইট</h5>
-                    </a>
-                  </div>
-                  <!-- releted post end -->
+                  <!-- releted post markup end -->
+                  <!-- end of loop -->
+                  <?php
+                      }
+                  ?>
                 </div>
               </div>
               <!-- @@@@@@@@Related post area End@@@@@@@@@ -->
