@@ -37,23 +37,38 @@
               <div class="pub-date">
                 <!-- date icon -->
                 <a href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-                  </svg>
+                <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/calender.svg" alt="">
                 </a>
                 <!-- date -->
+                <?php $post_date = get_the_date( 'D M j' ); ?>
                 <a href="#">
-                  <p class="pt-1">3 November, 2022</p>
+                  <p class="pt-1"><?php echo $post_date; ; ?></p>
                 </a>
+              </div>
+              <!-- Category -->
+              <div class="category">
+                <!-- category icon -->
+                <a href="#">
+                  <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/archive.svg" alt="">
+                </a>
+                <!-- category name -->
+                <?php 
+                  $categories = get_the_category();
+                  if ( ! empty( $categories ) ) {
+                    echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+                  }
+                ?>
               </div>
               
             </div>
 
-            <!-- @@@@ Content body area EEEEE-->
+            <!-- @@@@ Content body area -->
             <div class="blog-content-body">
-              <!-- feature quote -->
-              <hr class="vertical">
-              <q class="p-1">	<?php the_excerpt(); ?> </q>
+            <hr class="vertical">
+              <!-- Excerpt Area Feture quote -->
+              <div class="excerpt">	
+                <?php the_excerpt(); ?> 
+              </div>
               <hr class="vertical">
               <!-- Blog main content -->
               <div class="blog-main-content pt-3">
@@ -63,13 +78,28 @@
             <!-- blog content body content end -->
 
             <!-- @content bootoms area: @ -->
-            <div class="con-ft-area ">
-
-              <!-- @@@@@@@@icons area, social share, love @@@@@@@@-->
+            <div class="con-ft-area "> 
+              <!-- @@@@@@@@ Tags, icons area, social share, love @@@@@@@@-->
+              <div class="tags d-flex">
+                  <a href="#">
+                    <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/tags.svg" alt="">
+                  </a>
+                  <!-- post tags -->
+                  <?php 
+                    $post_tags = get_the_tags();
+                    if ( ! empty( $post_tags ) ) {
+                      echo '<ul>';
+                      foreach( $post_tags as $post_tag ) {
+                        echo '<li><a href="' . get_tag_link( $post_tag ) . '">' . $post_tag->name . '</a></li>';
+                      }
+                      echo '</ul>';
+                    }
+                  ?>
+              </div>
               <div class="icon-area d-flex">
                 <!-- $$$$psot views$$$$ -->
                 <div class="view d-flex p-3">
-                  <!-- icon -->
+                  <!-- view icon -->
                   <a class="icon"  href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                       <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
@@ -122,20 +152,21 @@
                   <!-- Social icon text -->
                   <!-- <p>শেয়ার করে ছড়িয়ে দিন!</p> -->
                 </div>
+                <hr>
               </div>
               <!-- @@@@@@@@icon area end@@@@@@@@-->
 
               <!-- @@@@@@@@Author area Strat@@@@@@@@-->
-              <div class="blog-author-info-area">
+              <div class="blog-author-info-area mt-5">
                 <div class="row">
                   <!-- profile pic area -->
                   <div class="pro-pic col-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>./assect/img/rusulazomsumondarkldkf.png" width="100%" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>./assect/img/rusulazomsumondarkldkf.png" width="100%" height="100px" alt="">
                   </div>
                   <!-- Author info area -->
                   <div class="blog-author-info col-9">
-                    <h4>মোঃ রুসুল আজম</h4>
-                    <p>ভালবাসি লিখতে......ভালবাসি লিখতে......ভালবাসি লিখতে......ভালবাসি লিখতে......ভালবাসি লিখতে......ভালবাসি লিখতে......ভালবাসি লিখতে......ভালবাসি লিখতে......ভালবাসি লিখতে......ভালবাসি লিখতে......ভালবাসি লিখতে...... </p>
+                    <a href="#"><h4>মোঃ রউসুল আজম</h4></a>
+                    <p>ভালবাশি লিখতে! বাংলা ভাষায় প্রযুক্তি বিসায়ক লেখা ছড়িয়ে দিতে এই খুদ্র প্রচেষ্টা। নাম মাত্র হাদিয়ার বিনিময়ে, বাংলা ইংরেজি পেইড কন্টেন্ট লিখিয়ে নিতে যোগাযোগঃ <a href="tel:6031112298">০১৮৮২৮৩৪০৭১</a> </p>
                     <!-- facebook icon -->
                   </div>
                 </div>
@@ -163,7 +194,7 @@
                   <div class="col-md-4  col-sm-12 post">
                     <a href="<?php the_permalink(); ?>">
                         <!-- post thumbnails -->
-                        <img src="<?php the_post_thumbnail_url(); ?>" width="100%" height="200px" alt="">
+                        <img src="<?php the_post_thumbnail_url(); ?>" width="100%" height="100px" alt="">
                                               
                         <!-- post tile -->
                         <h5><?php the_title(); ?></h5>

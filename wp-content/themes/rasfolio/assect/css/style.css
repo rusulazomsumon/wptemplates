@@ -441,6 +441,11 @@ footer{
 .blog-content-body a{
     text-decoration: none;
 }
+
+/* Top icons */
+.category {
+    margin-left: 10px;
+}
 /* ########Quote########## */
 /* .blog-content-body hr.vertical {
     border: 0;
@@ -449,14 +454,24 @@ footer{
     height: 50px;
     float: left;
   }
-
-  .blog-content-body q{
-    padding-right: 10px;
-  } */
+*/
+  .blog-content-body .excerpt p{
+    padding: 10px;
+    background-color: #202222;
+    color: #C6C5B9;
+    font-size: 1.25rem;
+    
+  } 
   
-
+/*@@@@@@@@@@@ main content @@@@@@@@@@@@@@*/
+.blog-main-content p{
+    font-family: 'charukolaultralight', Arial, sans-serif !important;
+    color: #0f0e01;
+    font-size: 1rem;
+    font-weight: 500;
+}
 /* Big 1st letter */
-.blog-content-body p::first-letter {
+.blog-content-body DIV:first-child p::first-letter {
     font-size: 40px;
     color: #e80222;
     font-weight: bold;
@@ -469,8 +484,17 @@ footer{
 .con-ft-area .icon {
     padding-right: 10px;
 }
+/* Tags */
+.con-ft-area .tags ul{
+    display: flex;
+}
 
-/* content love notifacation */
+.con-ft-area .tags ul li{
+    list-style: none;
+    margin-right: 10px;
+}
+
+/*### content love notifacation ####*/
 .con-ft-area .notification {
     text-decoration: none;
     padding: 0px 16px;
