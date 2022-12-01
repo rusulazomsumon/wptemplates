@@ -1,5 +1,4 @@
-
-    <?php
+<?php
         get_header();
     ?>
 
@@ -50,101 +49,51 @@
     <section class="container-flued blog-area">
       <div class="container blog-container">
         <div class="row">
-          <!-- *******Blog area intro******** -->
+            <!-- @@@@@@@@@@@@@@@@@@@@@@Blog Contents@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
           <div class="col-lg-12 blog-area">
               <div class="section-tittle pt-5 text-center">
                   <h1 class="heading">বিছিন্ন ভাবনাগুলি</h1>
               </div>
           </div>
+          <!-- content sourcing -->
+          <?php 
+                $args = array(
+                    'post_type'     =>  'post',
+                    'order'         =>  'DSC',
+                    'posts_per_page' =>  8
+                 );
+                $query = new WP_Query($args);
+                while($query -> have_posts()){
+                    $query -> the_post();
+            ?>
           <!-- *********@@@@@ blog single item @@@@@*********-->
           <div class="col-lg-3 col-md-4 col-sm-6  col-xm-6 pt-5 blog-item">
             <!-- feture image -->
             <div class="blog-fImg p-2">
-              <img src="<?php echo get_template_directory_uri(); ?>./assect/img/WebCoverRusulAzom.jpg" alt="blog feture image">
+              <a href="<?php the_permalink(); ?>">
+              <img src="<?php the_post_thumbnail_url(); ?>" alt="blog feture image" width="100%" height="100px">
+              </a>
             </div>
             <!-- blog content -->
             <div class="blog-content">
               <div class="content-head">
-                <h2><a href="#">বাংলাদেশ জিন্দাবাদ</a></h2>
-                <div class="iocn-box mb-2 opacity-50">
-                  <!-- date -->
-                  <a href="#"><i class="bi bi-calendar p-1"></i> <span>22 November, 2022</span></a>
-                  <!-- reding time -->
-                  <a href="#"><i class="bi bi-clock-history p-1"></i> <span>3 Min Read</span></a>
-
-                </div>
-              </div>              
-              <p>দেশে ডেঙ্গুতে আক্রান্ত ও মৃতের তালিকা বাড়ছে। সব বয়সী মানুষ এই রোগে আক্রান্ত হচ্ছে। ডেঙ্গু পরিস্থিতি নিয়ে কথা <span><a href="#"> ... সম্পূর্ণ লেখাটি>></a></span> </p>
+                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+              </div>  
+              <!-- Horizental Line -->
+              <hr>
+              <!-- post excerpt  -->
+              <div>
+                <a href="<?php the_permalink(); ?>">
+                  <?php the_excerpt(); ?>
+                </a>
+              </div>
             </div>
           </div>
-
-          <!-- *********@@@@@ blog single item @@@@@*********-->
-          <div class="col-lg-3 col-md-4 col-sm-6  col-xm-6 pt-5 blog-item">
-            <!-- feture image -->
-            <div class="blog-fImg p-2">
-              <img src="<?php echo get_template_directory_uri(); ?>./assect/img/WebCoverRusulAzom.jpg" alt="blog feture image">
-            </div>
-            <!-- blog content -->
-            <div class="blog-content">
-              <div class="content-head">
-                <h2><a href="#">বাংলাদেশ জিন্দাবাদ</a></h2>
-                <div class="iocn-box mb-2 opacity-50">
-                  <!-- date -->
-                  <a href="#"><i class="bi bi-calendar p-1"></i> <span>22 November, 2022</span></a>
-                  <!-- reding time -->
-                  <a href="#"><i class="bi bi-clock-history p-1"></i> <span>3 Min Read</span></a>
-
-                </div>
-              </div>              
-              <p>দেশে ডেঙ্গুতে আক্রান্ত ও মৃতের তালিকা বাড়ছে। সব বয়সী মানুষ এই রোগে আক্রান্ত হচ্ছে। ডেঙ্গু পরিস্থিতি নিয়ে কথা <span><a href="#"> ... সম্পূর্ণ লেখাটি>></a></span> </p>
-            </div>
-          </div>
-          <!-- *********@@@@@ blog single item @@@@@*********-->
-          <div class="col-lg-3 col-md-4 col-sm-6  col-xm-6 pt-5 blog-item">
-            <!-- feture image -->
-            <div class="blog-fImg p-2">
-              <img src="<?php echo get_template_directory_uri(); ?>./assect/img/WebCoverRusulAzom.jpg" alt="blog feture image">
-            </div>
-            <!-- blog content -->
-            <div class="blog-content">
-              <div class="content-head">
-                <h2><a href="#">বাংলাদেশ জিন্দাবাদ</a></h2>
-                <div class="iocn-box mb-2 opacity-50">
-                  <!-- date -->
-                  <a href="#"><i class="bi bi-calendar p-1"></i> <span>22 November, 2022</span></a>
-                  <!-- reding time -->
-                  <a href="#"><i class="bi bi-clock-history p-1"></i> <span>3 Min Read</span></a>
-
-                </div>
-              </div>              
-              <p>দেশে ডেঙ্গুতে আক্রান্ত ও মৃতের তালিকা বাড়ছে। সব বয়সী মানুষ এই রোগে আক্রান্ত হচ্ছে। ডেঙ্গু পরিস্থিতি নিয়ে কথা <span><a href="#"> ... সম্পূর্ণ লেখাটি>></a></span> </p>
-            </div>
-          </div>
-          <!-- *********@@@@@ blog single item @@@@@*********-->
-          <div class="col-lg-3 col-md-4 col-sm-6  col-xm-6 pt-5 blog-item">
-            <!-- feture image -->
-            <div class="blog-fImg p-2">
-              <img src="<?php echo get_template_directory_uri(); ?>./assect/img/WebCoverRusulAzom.jpg" alt="blog feture image">
-            </div>
-            <!-- blog content -->
-            <div class="blog-content">
-              <div class="content-head">
-                <h2><a href="#">বাংলাদেশ জিন্দাবাদ</a></h2>
-                <div class="iocn-box mb-2 opacity-50">
-                  <!-- date -->
-                  <div>
-                    <a href="#"><i class="bi bi-calendar p-1"></i> 
-                    </a>
-                    <a href="#">22 November, 2022</a>
-                  </div>
-                  <!-- reding time -->
-                  <a href="#"><i class="bi bi-clock-history p-1"></i> <span>3 Min Read</span></a>
-
-                </div>
-              </div>              
-              <p>দেশে ডেঙ্গুতে আক্রান্ত ও মৃতের তালিকা বাড়ছে। সব বয়সী মানুষ এই রোগে আক্রান্ত হচ্ছে। ডেঙ্গু পরিস্থিতি নিয়ে কথা <span><a href="#"> ... সম্পূর্ণ লেখাটি>></a></span> </p>
-            </div>
-          </div>
+          <!-- end of loop -->
+          <?php
+              }
+          ?>
 
           <!-- single items end -->
           <!-- #################Page Pagination################## -->
@@ -152,7 +101,7 @@
             <a href="#"><<</a>
             <div class="pages">
               <a class="page">১</a>
-              <a class="page">৩</a>
+              <a class="page">২</a>
               <a class="page">...</a>
               <a class="page">৬</a>
               <a class="page">৭</a>
@@ -783,3 +732,5 @@
     <?php
         get_footer();
     ?>
+   
+   

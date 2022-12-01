@@ -83,7 +83,8 @@
           </button>
           <!-- @@@@@@@Logo@@@@@@@@@@ -->
           <div class="ras ">
-            <a href="#">
+            <?php $url = home_url( '/' );?>
+            <a href="<?php echo $url; ?>">  
               <h3 class="animate-text "> RAS</h3>
             </a>
           </div>
