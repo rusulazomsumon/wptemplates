@@ -368,6 +368,11 @@ footer{
 .footer-item-container a{
     text-decoration: none;
 }
+footer {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-size: large;
+}
+
 .copyright{
     display: flex;
     justify-content: center;
@@ -378,7 +383,7 @@ footer{
 
 
 /*%%%%%%%%%%%%%%%%%%%%%% Back to top %%%%%%%%%%%%%%%%%%%%%%%*/
-.back-to-top{
+/* .back-to-top{
     background-color: #202222;
     width: 50px;
     height: 50px;
@@ -397,7 +402,6 @@ footer{
     text-decoration: none;
     font-size: x-large;
 
-    /* hide in general, Deactive Mode */
     opacity: 0;
     pointer-events: none;
     transition: all .4s;
@@ -412,7 +416,7 @@ footer{
 .back-to-top.active:hover {
     opacity: .95;
     background-color: #233535;
-}
+} */
 
 
 

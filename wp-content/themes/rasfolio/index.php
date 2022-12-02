@@ -127,53 +127,43 @@
                   <p>আপনার বিজনেস কে আধুনিকায়নে আমার সেবাসমুহ! </p>
               </div>
           </div>
+           <!-- content sourcing -->
+           <?php 
+                $args = array(
+                    'post_type'     =>  'service',
+                    'order'         =>  'DSC',
+                    'posts_per_page' =>  6
+                 );
+                $query = new WP_Query($args);
+                while($query -> have_posts()){
+                    $query -> the_post();
+            ?>
           <!-- ********* Service single item -->
           <div class="col-xl-4 col-lg-4 col-md-6 pt-5 service-card ">
             <div class="service-content">
               <!-- Service Icon -->
             <div class="service-icon p-2">
-              <img src="<?php echo get_template_directory_uri(); ?>./assect/img/web.png" width="70px" alt="icon">            
+              <img src="<?php the_post_thumbnail_url(); ?>" width="70px" height="70px" alt="icon">            
             </div>
             <!-- Service content -->
             <div class="service-text text-center">
-              <h2>বিজনেস ওয়েবসাট</h2>              
-              <p>আপনার সংগঠন, এনজিও, কোম্পানি, স্কুল কলেজ, ও বিজনেস এর অনলাইন প্রফাইল। সহজে ব্যাবহারযোগ্য বাজেট ওয়েবসাইট পেতে যোগাযোগ করুন।  </p>
-              <button class="btn">অর্ডার করুন</button>
+              <h2><?php the_title(); ?></h2>              
+              <?php the_content() ?>  
+               <!-- dynamic button content content -->
+               <?php 
+                        $button_text = get_field('button_text', 'option');
+                        $button_link = get_field('button_url', 'option');
+                    ?>
+              <a href="<?php echo $button_link; ?>">
+                <button class="btn"><?php echo $button_text; ?></button>
+              </a>
             </div>
             </div>
           </div>
-
-          <!-- ********* Service single item -->
-          <div class="col-xl-4 col-lg-4 col-md-6 pt-5 service-card ">
-            <div class="service-content">
-              <!-- Service Icon -->
-            <div class="service-icon p-2">
-              <img src="<?php echo get_template_directory_uri(); ?>./assect/img/web.png" width="70px" alt="icon">            
-            </div>
-            <!-- Service content -->
-            <div class="service-text text-center">
-              <h2>বিজনেস ওয়েবসাট</h2>              
-              <p>আপনার সংগঠন, এনজিও, কোম্পানি, স্কুল কলেজ, ও বিজনেস এর অনলাইন প্রফাইল। সহজে ব্যাবহারযোগ্য বাজেট ওয়েবসাইট পেতে যোগাযোগ করুন।  </p>
-              <button class="btn">অর্ডার করুন</button>
-            </div>
-            </div>
-          </div>
-
-          <!-- ********* Service single item -->
-          <div class="col-xl-4 col-lg-4 col-md-6 pt-5 service-card ">
-            <div class="service-content">
-              <!-- Service Icon -->
-            <div class="service-icon p-2">
-              <img src="<?php echo get_template_directory_uri(); ?>./assect/img/web.png" width="70px" alt="icon">            
-            </div>
-            <!-- Service content -->
-            <div class="service-text text-center">
-              <h2>বিজনেস ওয়েবসাট</h2>              
-              <p>আপনার সংগঠন, এনজিও, কোম্পানি, স্কুল কলেজ, ও বিজনেস এর অনলাইন প্রফাইল। সহজে ব্যাবহারযোগ্য বাজেট ওয়েবসাইট পেতে যোগাযোগ করুন।  </p>
-              <button class="btn">অর্ডার করুন</button>
-            </div>
-            </div>
-          </div>
+          <!-- end of loop -->
+          <?php
+              }
+          ?>
 
         </div>
       </div>

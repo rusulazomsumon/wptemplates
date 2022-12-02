@@ -5,7 +5,7 @@
     // dynamic site/page title
     function rasfolio_setup(){
         add_theme_support('title-tag','excerpt');
-        add_theme_support('post-thumbnails',array('post'));
+        add_theme_support('post-thumbnails',array('post','service'));
 
         // registering manu
         register_nav_menus(array(
@@ -111,3 +111,48 @@
         
     //     add_action( 'manage_posts_custom_column', 'gt_posts_custom_column_views' );
     // https://blog.hubspot.com/website/wordpress-post-views
+
+    // *********************************************************************************************************
+    // dynamic services  using custom post  
+    function rasfolio_services(){
+        $labels = array(
+            'name'                  => _x( 'Services', 'Post type general name', 'rasfolio' ),
+            'rasfolio'              => _x( 'service', 'Post type singular name', 'rasfolio' ),
+            'menu_name'             => _x( 'Services', 'Admin Menu text', 'rasfolio' ),
+            'name_admin_bar'        => _x( 'service', 'Add New on Toolbar', 'rasfolio' ),
+            'add_new'               => __( 'Add Service', 'rasfolio' ),
+            'add_new_item'          => __( 'Add New Service', 'rasfolio' ),
+            'new_item'              => __( 'New Service', 'rasfolio' ),
+            'edit_item'             => __( 'Edit Service', 'rasfolio' ),
+            'view_item'             => __( 'View Service', 'rasfolio' ),
+            'all_items'             => __( 'All Service', 'rasfolio' ),
+            'search_items'          => __( 'Search Service', 'rasfolio' ),
+            'parent_item_colon'     => __( 'Parent Service:', 'rasfolio' ),
+            'not_found'             => __( 'No Services found.', 'rasfolio' ),
+            'not_found_in_trash'    => __( 'No Services found in Trash.', 'rasfolio' ),
+            'featured_image'        => _x( 'Service Cover Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
+            );
+
+            $args = array(
+                'labels'             => $labels,
+                'public'             => true,
+                'publicly_queryable' => true,
+                'show_ui'            => true,
+                'show_in_menu'       => true,
+                'query_var'          => true,
+                'rewrite'            => array( 'slug' => 'service' ),
+                'capability_type'    => 'post',
+                'menu_position'       => 5,
+                'menu_icon'           => 'dashicons-analytics',
+                'has_archive'        => true,
+                'hierarchical'       => false,
+                'menu_position'      => null,
+                'supports'           => array( 'title', 'editor', 'thumbnail'),
+                // to enable gutenburg editor this code need, without by defult clasic activate
+                'show_in_rest'       => true
+                
+            );
+        
+            register_post_type( 'service', $args );
+    }
+    add_action('init','rasfolio_services');
