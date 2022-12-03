@@ -5,7 +5,7 @@
     // dynamic site/page title
     function rasfolio_setup(){
         add_theme_support('title-tag','excerpt');
-        add_theme_support('post-thumbnails',array('post','service'));
+        add_theme_support('post-thumbnails',array('post','service','project'));
 
         // registering manu
         register_nav_menus(array(
@@ -156,3 +156,48 @@
             register_post_type( 'service', $args );
     }
     add_action('init','rasfolio_services');
+
+     // *********************************************************************************************************
+    // dynamic porjects  using custom post  
+    function rasfolio_projects(){
+        $labels = array(
+            'name'                  => _x( 'Projects', 'Post type general name', 'rasfolio' ),
+            'rasfolio'              => _x( 'Project', 'Post type singular name', 'rasfolio' ),
+            'menu_name'             => _x( 'Projects', 'Admin Menu text', 'rasfolio' ),
+            'name_admin_bar'        => _x( 'Projects', 'Add New on Toolbar', 'rasfolio' ),
+            'add_new'               => __( 'Add Project', 'rasfolio' ),
+            'add_new_item'          => __( 'Add New Project', 'rasfolio' ),
+            'new_item'              => __( 'New Project', 'rasfolio' ),
+            'edit_item'             => __( 'Edit Projects', 'rasfolio' ),
+            'view_item'             => __( 'View Project', 'rasfolio' ),
+            'all_items'             => __( 'All Projects', 'rasfolio' ),
+            'search_items'          => __( 'Search Projects', 'rasfolio' ),
+            'parent_item_colon'     => __( 'Parent Project:', 'rasfolio' ),
+            'not_found'             => __( 'No Projects found.', 'rasfolio' ),
+            'not_found_in_trash'    => __( 'No Projects found in Trash.', 'rasfolio' ),
+            'featured_image'        => _x( 'Projects Cover Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'textdomain' ),
+            );
+
+            $args = array(
+                'labels'             => $labels,
+                'public'             => true,
+                'publicly_queryable' => true,
+                'show_ui'            => true,
+                'show_in_menu'       => true,
+                'query_var'          => true,
+                'rewrite'            => array( 'slug' => 'project' ),
+                'capability_type'    => 'post',
+                'menu_position'       => 6,
+                'menu_icon'           => 'dashicons-analytics',
+                'has_archive'        => true,
+                'hierarchical'       => false,
+                'menu_position'      => null,
+                'supports'           => array( 'title', 'editor', 'thumbnail'),
+                // to enable gutenburg editor this code need, without by defult clasic activate
+                // 'show_in_rest'       => true
+                
+            );
+        
+            register_post_type( 'project', $args );
+    }
+    add_action('init','rasfolio_projects');
