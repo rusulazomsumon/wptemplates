@@ -197,8 +197,8 @@
                 <!-- content sourcing -->
                 <?php 
                       $args = array(
-                          'post_type'     =>  'service',
-                          'order'         =>  'DSC',
+                          'post_type'     =>  'project',
+                          'order'         =>  'ASC',
                           'posts_per_page' =>  6
                       );
                       $query = new WP_Query($args);
@@ -210,13 +210,9 @@
                   <img src="<?php echo get_template_directory_uri(); ?>./assect/img/WebCoverRusulAzom.jpg" width="100%" alt="">
                   <div class="item-details">
                     <div class="project-info">
-                      <h3>পার্সোনাল ব্লগ</h3>
-                      <p>আমার বেসিক লার্নিং এর প্রায় সব কিছুর সমষ্টি এটি - প্রথমে photoshop দিয়ে 
-                        ডিজাইন করে সেটাকে fingma তে রুপারন্তর করেছি। তারপর, HTML, CSS, Javascript
-                        ও Bootstrap দিয়ে Template এ রুপান্তর করে, WordPress দিয়ে Dynamic  করেছি। 
-                        প্রজেক্টটিতে WordPress এর custome post type, Hoock, ACM, Contact form 7, 
-                        Rest API ব্যাবহার করা হয়েছে।
-                      </p>
+                      <h3><?php the_title() ?></h3>
+                      <!-- contents -->
+                      <?php the_content(); ?>
                     </div>
                     <!-- icon area -->
                     <div class="icon p-2 text-end">
