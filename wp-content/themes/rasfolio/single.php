@@ -22,7 +22,7 @@
             <div class="blog-content-info d-flex flex-row">
               <!-- Post author icon -->
               <a href="#">
-                <img src="<?php echo get_template_directory_uri(); ?>./assect/img/rusulazomsumonProthomalo.png" width="24px" height="24px" class="rounded-circle" alt="Rusul Azom Sumon">
+                <img src="<?php echo get_template_directory_uri(); ?>/assect/img/rusulazomsumonProthomalo.png" width="24px" height="24px" class="rounded-circle" alt="Rusul Azom Sumon">
               </a>
               <!-- author name linked -->
               <?php
@@ -37,7 +37,7 @@
               <div class="pub-date">
                 <!-- date icon -->
                 <a href="#">
-                <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/calender.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/calender.svg" alt="">
                 </a>
                 <!-- date -->
                 <?php $post_date = get_the_date( 'D M j' ); ?>
@@ -49,7 +49,7 @@
               <div class="category">
                 <!-- category icon -->
                 <a href="#">
-                  <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/archive.svg" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/archive.svg" alt="">
                 </a>
                 <!-- category name -->
                 <?php 
@@ -82,7 +82,7 @@
               <!-- @@@@@@@@ Tags, icons area, social share, love @@@@@@@@-->
               <div class="tags d-flex">
                   <a href="#">
-                    <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/tags.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/tags.svg" alt="">
                   </a>
                   <!-- post tags -->
                   <?php 
@@ -130,23 +130,23 @@
                   <!-- social share icons -->
                   <div class="socil-icons">
                     <a href="#">
-                      <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/linkedin.svg" alt="">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/linkedin.svg" alt="">
                     </a>
                     <!-- facebook -->
                     <a href="#">
-                      <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/facebook.svg" alt="">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/facebook.svg" alt="">
                     </a>
                     <!-- github -->
                     <a href="#">
-                      <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/github.svg" alt="">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/github.svg" alt="">
                     </a>
                     <!-- whatapp -->
                     <a href="#">
-                      <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/whatsapp.svg" alt="">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/whatsapp.svg" alt="">
                     </a>
                     <!-- Quora -->
                     <a href="#">
-                      <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/quora.svg" alt="">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/quora.svg" alt="">
                     </a>
                   </div>
                   <!-- Social icon text -->
@@ -161,7 +161,7 @@
                 <div class="row">
                   <!-- profile pic area -->
                   <div class="pro-pic col-3">
-                    <img src="<?php echo get_template_directory_uri(); ?>./assect/img/rusulazomsumondarkldkf.png" width="100%" height="100px" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assect/img/rusulazomsumondarkldkf.png" width="100%" height="100px" alt="">
                   </div>
                   <!-- Author info area -->
                   <div class="blog-author-info col-9">
@@ -221,7 +221,7 @@
             <!-- Author profile -->
             <h3>কে আমি?</h3>
             <div class="profile text-center">
-              <img src="<?php echo get_template_directory_uri(); ?>./assect/img/rusulazomsumonProthomalo.png" class="img-thumbnail rounded-circle" alt="RusulAzomSumon">
+              <img src="<?php echo get_template_directory_uri(); ?>/assect/img/rusulazomsumonProthomalo.png" class="img-thumbnail rounded-circle" alt="RusulAzomSumon">
               <h5>Md. Rusul Azom Sumon</h5>
               <p>A WordPress Developer</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quidem sint suscipit commodi corporis dolorem nesciunt, consequuntur modi neque magni sapiente eius nihil dolorum! <span><a href="#">সম্পূর্ণ প্রফাইল</a></span></p>

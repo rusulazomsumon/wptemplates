@@ -38,7 +38,7 @@
           </div>
           <!-- about info right -->
           <div class="proPic col-md-4">
-              <img src="<?php echo get_template_directory_uri(); ?>./assect/img/rasumonprothomalopng.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/assect/img/rasumonprothomalopng.png" alt="">
           </div>
         </div>
       </div>
@@ -218,11 +218,11 @@
                     <div class="icon p-2 text-end">
                       <!-- link icon -->
                       <a href="#" class="p-3">
-                        <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/link.svg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/link.svg" alt="">
                       </a>
                       <!-- git icon -->
                       <a href="#" class="p-3">
-                        <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/github.svg" alt="" width="16" height="16">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/github.svg" alt="" width="16" height="16">
                       </a>
                     </div>
                   </div>
@@ -265,11 +265,11 @@
                       <div class="icon p-2 text-end">
                         <!-- link icon -->
                         <a href="#" class="p-3">
-                          <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/link.svg" alt="">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/link.svg" alt="">
                         </a>
                         <!-- git icon -->
                         <a href="#" class="p-3">
-                          <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/github.svg" alt="" width="16" height="16">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/github.svg" alt="" width="16" height="16">
                         </a>
                       </div>
                     </div>
@@ -311,11 +311,11 @@
                       <div class="icon p-2 text-end">
                         <!-- link icon -->
                         <a href="#" class="p-3">
-                          <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/link.svg" alt="">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/link.svg" alt="">
                         </a>
                         <!-- git icon -->
                         <a href="#" class="p-3">
-                          <img src="<?php echo get_template_directory_uri(); ?>./assect/img/icon/github.svg" alt="" width="16" height="16">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/github.svg" alt="" width="16" height="16">
                         </a>
                       </div>
                     </div>
