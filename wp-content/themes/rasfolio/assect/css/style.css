@@ -139,9 +139,18 @@ q {
     transition: 1s;
 }
 /* profile pic */
-.about-info .proPic img{
+.about-info .proPic{
+    position: relative;
+    /* height: 300px;
+    width: 300px; */
     width: 100%;
     opacity: .7;
+}
+
+.about-info .proPic img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 /* ##############@@@@@@@@@@@@##########Blog Area#################@@@@@@@@@######  */

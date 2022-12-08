@@ -21,43 +21,47 @@
             <!-- @@@@@content head icon area @@@@@-->
             <div class="blog-content-info d-flex flex-row">
               <!-- Post author icon -->
-              <a href="#">
-                <img src="<?php echo get_template_directory_uri(); ?>/assect/img/rusulazomsumonProthomalo.png" width="24px" height="24px" class="rounded-circle" alt="Rusul Azom Sumon">
-              </a>
-              <!-- author name linked -->
-              <?php
-                 $author_id = $post->post_author; 
-                 $author_url = get_the_author_meta('user_url',$author_id);
-                 $author_name =  get_the_author_meta('display_name', $author_id); 
-              ?>
-              <a href="<?php echo $author_url; ?>" class="pt-1">
-                <p><?php echo $author_name; ?></p>
-              </a>
-              <!-- date -->
-              <div class="pub-date">
-                <!-- date icon -->
+              <div class="col-md-4 col-sm-12 d-flex">
                 <a href="#">
-                <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/calender.svg" alt="">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assect/img/rusulazomsumonProthomalo.png" width="24px" height="24px" class="rounded-circle" alt="Rusul Azom Sumon">
                 </a>
-                <!-- date -->
-                <?php $post_date = get_the_date( 'D M j' ); ?>
-                <a href="#">
-                  <p class="pt-1"><?php echo $post_date; ?></p>
+                <!-- author name linked -->
+                <?php
+                  $author_id = $post->post_author; 
+                  $author_url = get_the_author_meta('user_url',$author_id);
+                  $author_name =  get_the_author_meta('display_name', $author_id); 
+                ?>
+                <a href="<?php echo $author_url; ?>" class="pt-1">
+                  <p><?php echo $author_name; ?></p>
                 </a>
               </div>
-              <!-- Category -->
-              <div class="category">
-                <!-- category icon -->
-                <a href="#">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/archive.svg" alt="">
-                </a>
-                <!-- category name -->
-                <?php 
-                  $categories = get_the_category();
-                  if ( ! empty( $categories ) ) {
-                    echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
-                  }
-                ?>
+              <!-- date @ category -->
+              <div class="col-md-8 col-sm-12 d-flex">
+                <div class="pub-date">
+                  <!-- date icon -->
+                  <a href="#">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/calender.svg" alt="">
+                  </a>
+                  <!-- date -->
+                  <?php $post_date = get_the_date( 'D M j' ); ?>
+                  <a href="#">
+                    <p class="pt-1"><?php echo $post_date; ?></p>
+                  </a>
+                </div>
+                <!-- Category -->
+                <div class="category">
+                  <!-- category icon -->
+                  <a href="#">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/archive.svg" alt="">
+                  </a>
+                  <!-- category name -->
+                  <?php 
+                    $categories = get_the_category();
+                    if ( ! empty( $categories ) ) {
+                      echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+                    }
+                  ?>
+                </div>
               </div>
               
             </div>
