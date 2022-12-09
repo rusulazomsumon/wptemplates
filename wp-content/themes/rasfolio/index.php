@@ -11,24 +11,25 @@
           <div class="col-md-8 mt-5 about-info-con">
             <!-- heading text -->
             
-            <h1 class="display-1 name text-end">
+            <h1 class="display-1 name ">
               <!-- <ruby>রউসুল আজম সুমন<rt>২.০</rt></ruby> -->
               রউসুল আজম সুমন
             </h1>
             <!-- subheading text -->
             <!-- <h3 class="des text-end">একজন  ফুলস্ট্যাক ডেভেলপার!</h3> -->
-            <h3 class="des text-end">একজন ব্যার্থ ড্রপ-আউট</h3>
+            <h3 class="des pb-3">আমি একজন ফুলস্ট্যাক ডেভেলপার!</h3>
 
-            <p class="details text-end">
+            <p class="details ">
               ৩ বছর ধরে WordPress Customization নিয়ে কাজ করার পর, WordPress Theme and Plugin Development শুরু করেছি। র- পিএইচপি দিয়ে কিছু প্রজেক্ট করেছি, যেগুলিকে এখন লারাভেল এ কনভার্ট করছি। <br>
               PHP ফিল্ডে কাজ করতে চাই, লিটকোড এ  PHP ও JavaScript দিয়ে ২৩ সালের মধ্য ৫০০+ প্রব্লেম সল্ভ করার ইচ্ছে আছে। <br> mySQL, DevOps, Machine Learning, Compatative Programing, Networking, MIS, ও OOP এই বিসয়গুলিতে ভাল ধারনা আছে। 
-              <br> ২০২৭ সালের মধ্যে নিজেকে ভালো মানের একজন রিমোট PHP ডেভেলপার হিদাবে প্রতিষ্ঠিত করতে চাই (ইনশাল্লাহ!) <br> <b><i><a style="color: green" href="#">WordPress ও PHP ফিল্ড এ রিমোট জব বা চুক্তি ভিত্তিক কাজ খুজতেছি!</a></i></b>
+              <br> ২০২৭ সালের মধ্যে নিজেকে ভালো মানের একজন রিমোট PHP ডেভেলপার হিদাবে প্রতিষ্ঠিত করতে চাই (ইনশাল্লাহ!) <br> 
             </p>
+            <p><b><i><a style="color: green" href="#">WordPress ও PHP ফিল্ডে রিমোট জব বা চুক্তি ভিত্তিক কাজ খুজতেছি!</a></i></b></p>
             <div class="extr-info">
               <!-- bangla date -->
               <!-- <p class="text-end">আজ <span id="date-today"></span></p> -->
             </div>
-            <div class="btn-area text-end mb-3">
+            <div class="btn-area text-center mb-3">
               <div class="row">
                 <div class="col-6">
                   <button class="btn">Resume</button>
@@ -42,8 +43,7 @@
           </div>
           <!-- about info right -->
           <div class="proPic col-md-4">
-              <img src="<?php echo get_template_directory_uri(); ?>/assect/img/rasumonprothomalopng.png" alt="">
-              <!-- buttons -->
+            <img src="<?php echo get_template_directory_uri(); ?>/assect/img/rasumonprothomalopng.png" alt="">
           </div>
         </div>
       </div>

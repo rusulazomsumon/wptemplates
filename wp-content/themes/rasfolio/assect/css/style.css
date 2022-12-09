@@ -140,17 +140,12 @@ q {
 }
 /* profile pic */
 .about-info .proPic{
-    position: relative;
-    /* height: 300px;
-    width: 300px; */
-    width: 100%;
-    opacity: .7;
+    display: flex;
 }
 
-.about-info .proPic img {
-    position: absolute;
-    left: 0;
-    bottom: 0;
+.about-info .proPic img{
+    width: 100%;
+    opacity: .7;
 }
 
 /* ##############@@@@@@@@@@@@##########Blog Area#################@@@@@@@@@######  */
