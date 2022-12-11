@@ -68,9 +68,21 @@ q {
     background-color: #161616;
     color: #C6C5B9;
 }
+
+.top-ber #sIcon{
+    display: flex;
+}
+
+/* .top-ber #sIcon a img{
+    color: #C6C5B9;
+} */
+
 #sIcon a{
     color: #3d11b6;
 }
+
+
+
 /* $$$$$$$$$$Logo Animation$$$$$$$$ */
 .animate-text
 {
