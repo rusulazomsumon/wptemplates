@@ -188,7 +188,7 @@
                   <?php 
                       $args = array(
                           'post_type'     =>  'post',
-                          'order'         =>  'DSC',
+                          'order'         =>  'ASC',
                           'posts_per_page' =>  3
                       );
                       $query = new WP_Query($args);
@@ -223,7 +223,7 @@
           <!-- ***************Right Sideber**************** -->
           <div class="col-md-4 col-12 p-5 r-sidebar con-box">
             <!-- Author profile -->
-            <h3>কে আমি?</h3>
+            <h3>আমার সম্পর্কে!</h3>
             <div class="profile text-center">
               <img src="<?php echo get_template_directory_uri(); ?>/assect/img/rusulazomsumonProthomalo.png" class="img-thumbnail rounded-circle" alt="RusulAzomSumon">
               <h5>Md. Rusul Azom Sumon</h5>
