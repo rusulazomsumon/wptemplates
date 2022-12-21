@@ -65,7 +65,7 @@ q {
 
 /*############### Top-BER ##################*/
 .top-ber{
-    background-color: #161616;
+    background-color: #7d7d7d;
     color: #C6C5B9;
 }
 
@@ -73,12 +73,10 @@ q {
     display: flex;
 }
 
-/* .top-ber #sIcon a img{
-    color: #C6C5B9;
-} */
 
-#sIcon a{
-    color: #3d11b6;
+.top-ber .social-icon a img{
+    padding-right: 2px;
+    /* filter: grayscale(100%); */
 }
 
 
