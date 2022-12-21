@@ -550,6 +550,17 @@ footer {
     
 }
 
+.blog-author-info-area .socil-icons{
+    display: flex;
+}
+
+.blog-author-info-area .socil-icons a img{
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+}
+
+
 /* Related post : content footer */
 .con-ft-area .related-post .post{
     padding: 10px;
@@ -560,6 +571,7 @@ footer {
     color: #0f0e01;
     font-family: 'Atma','charukolaultralight', Arial, sans-serif !important;
 }
+
 
   /* %%%%%%%%%%%%%%%%%%%%%%%%%%%Right Sideber %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 /* ##########Typography ##############*/

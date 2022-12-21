@@ -22,7 +22,7 @@
             <p class="details ">
               ৩ বছর ধরে WordPress Customization নিয়ে কাজ করার পর, WordPress Theme and Plugin Development শুরু করেছি। র- পিএইচপি দিয়ে কিছু প্রজেক্ট করেছি, যেগুলিকে এখন লারাভেল এ কনভার্ট করছি। <br>
               PHP ফিল্ডে কাজ করতে চাই, লিটকোড এ  PHP ও JavaScript দিয়ে ২৩ সালের মধ্য ৫০০+ প্রব্লেম সল্ভ করার ইচ্ছে আছে। <br> mySQL, DevOps, Machine Learning, Compatative Programing, Networking, MIS, ও OOP এই বিসয়গুলিতে ভাল ধারনা আছে। 
-              <br> ২০২৭ সালের মধ্যে নিজেকে ভালো মানের একজন রিমোট PHP ডেভেলপার হিদাবে প্রতিষ্ঠিত করতে চাই (ইনশাল্লাহ!) <br> 
+              <br> ২০২৫ সালের মধ্যে নিজেকে ভালো মানের একজন রিমোট PHP ডেভেলপার হিসাবে প্রতিষ্ঠিত করতে চাই (ইনশাল্লাহ!) <br> 
             </p>
             <p><b><i><a style="color: green" href="#">WordPress ও PHP ফিল্ডে রিমোট জব বা চুক্তি ভিত্তিক কাজ খুজতেছি!</a></i></b></p>
             <div class="extr-info">

@@ -172,7 +172,27 @@
                     <a href="#"><h4>মোঃ রউসুল আজম</h4></a>
                     <p>ভালবাশি লিখতে! বাংলা ভাষায় প্রোগ্রামিং ও প্রযুক্তি  বিদ্যা ছড়িয়ে দিতে এই খুদ্র প্রচেষ্টা। 
                       <a href="#"></a>
-                    <!-- facebook icon -->
+                    <!-- social share icons -->
+
+                    <div class="socil-icons">
+                      <!-- Leetcode -->
+                      <a href="https://leetcode.com/rusulazomsumon/" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/leetcode.png" width="16" height="16"  alt="leetcode icon">
+                      </a>
+                      <!-- linkedin -->
+                      <a href="https://www.linkedin.com/in/rusulazomsumon/" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/linkedin.svg" alt="">
+                      </a>
+                      <!-- facebook -->
+                      <a href="https://www.facebook.com/rousulazom.sumon/" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/facebook.svg" alt="">
+                      </a>
+                      <!-- github -->
+                      <a href="https://github.com/rusulazomsumon/" target="_blank">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/github.svg" alt="">
+                      </a>
+        
+                    </div>
                   </div>
                 </div>
               </div>
@@ -226,20 +246,36 @@
             <h3>আমার সম্পর্কে!</h3>
             <div class="profile text-center">
               <img src="<?php echo get_template_directory_uri(); ?>/assect/img/rusulazomsumonProthomalo.png" class="img-thumbnail rounded-circle" alt="RusulAzomSumon">
-              <h5>Md. Rusul Azom Sumon</h5>
-              <p>A WordPress Developer</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, quidem sint suscipit commodi corporis dolorem nesciunt, consequuntur modi neque magni sapiente eius nihil dolorum! <span><a href="#">সম্পূর্ণ প্রফাইল</a></span></p>
+              <h5 style="color: black;">Md. Rusul Azom Sumon</h5>
+              <p>আমি একজন ফুলস্ট্যাক ডেভেলপার!</p>
+              <p> ৩ বছর ধরে WordPress Customization নিয়ে কাজ করার পর, WordPress Theme and Plugin Development শুরু করেছি। র- পিএইচপি দিয়ে কিছু প্রজেক্ট করেছি, যেগুলিকে এখন লারাভেল এ কনভার্ট করছি।
+PHP ফিল্ডে কাজ করতে চাই, লিটকোড এ PHP ও JavaScript দিয়ে ২৩ সালের মধ্য ৫০০+ প্রব্লেম সল্ভ করার ইচ্ছে আছে।
+mySQL, DevOps, Machine Learning, Compatative Programing, Networking, MIS, ও OOP এই বিসয়গুলিতে ভাল ধারনা আছে।
+২০২৫ সালের মধ্যে নিজেকে ভালো মানের একজন রিমোট PHP ডেভেলপার হিসাবে প্রতিষ্ঠিত করতে চাই (ইনশাল্লাহ!)
+
+WordPress ও PHP ফিল্ডে রিমোট জব বা চুক্তি ভিত্তিক কাজ খুজতেছি! <span><a href="#">সম্পূর্ণ প্রফাইল</a></span></p>
             </div>
 
             <!-- Leatest Post -->
             <h3>নতুন লেখাগুলিঃ</h3>
             <div class="content">
               <ul>
-                <li><a href="#">সর্বশেষ লেখাগুলি ডেমোলেখাগুলি ডেমো টাইটেল ১</a></li>
-                <li><a href="#">সর্বশেষ লেখাগুলি ডেমো টাইটেল ২</a></li>
-                <li><a href="#">সর্বশেষ লেখাগুলি ডেমো টাইটেল ৩</a></li>
-                <li><a href="#">সর্বশেষ লেখাগুলি ডেমো টাইটেল ৪</a></li>
-                <li><a href="#">সর্বশেষ লেখাগুলি ডেমো টাইটেল ৫</a></li>
+                <?php 
+                    $args = array(
+                        'post_type'     =>  'post',
+                        'order'         =>  'ASC',
+                        'posts_per_page' =>  5
+                    );
+                    $query = new WP_Query($args);
+                    while($query -> have_posts()){
+                        $query -> the_post();
+                ?>
+                    <!-- repatative titles -->
+                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                <!-- end of loop -->
+                <?php
+                      }
+                  ?>      
               </ul>
             </div>
             <!-- All Category --> 
