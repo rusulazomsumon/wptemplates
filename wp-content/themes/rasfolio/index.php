@@ -412,6 +412,10 @@
           <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Social Icon @@@@@@@@@@@@@@@@@@@@@@@-->
           <div class="col-md-12 pt-4 text-center social-icon">
             <p>Find Me</p>
+            <!-- Leetcode -->
+            <a href="https://leetcode.com/rusulazomsumon/" target="_blank">
+              <img src="<?php echo get_template_directory_uri(); ?>/assect/img/icon/leetcode.png" color="white" width="24" height="24"   alt="leetcode icon">
+            </a>
             <!-- Linkedin -->
             <a href="#">
               <svg xmlns="http://www.w3.org/2000/svg" color="white" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
