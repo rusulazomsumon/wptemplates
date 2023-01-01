@@ -574,26 +574,34 @@ footer {
 
 
   /* %%%%%%%%%%%%%%%%%%%%%%%%%%%Right Sideber %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+  /* %%%%%%%%%%%%%%%%%%%%%%%%%%%Right Sideber %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+  /* %%%%%%%%%%%%%%%%%%%%%%%%%%%Right Sideber %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 /* ##########Typography ##############*/
 .r-sidebar {
     font-family: 'charukolaultralight', Arial, sans-serif !important;
 
 }
+
+/* Sections Headins */
+.r-sidebar h3{
+    font-size: 1.5rem;
+    color: #0f0e01;
+    font-weight: 700;
+}
+
+.r-sidebar .tags a{
+    color: #190D4C;
+}
+
+.r-sidebar p,a{
+    font-size: 1.15rem;
+    color: #190D4C;
+}
+
 /* all a tag */
 .r-sidebar a{
     text-decoration: none;
 }
-/* Sections Headins */
-.r-sidebar h3{
-    font-size: 1.5rem;
-    color: #161616;
-    font-weight: 700;
-}
-.r-sidebar p,a{
-    font-size: 1.15rem;
-    color: #202222;
-}
-
 
 /* Contents  */
 .r-sidebar .content a{
@@ -606,7 +614,11 @@ footer {
 /* ***********Categoris Post******** */
 /* File icon before */
 /* https://www.unicodepedia.com/unicode/miscellaneous-symbols-and-pictographs/1f4c1/file-folder/ */
-.r-sidebar .category ul li::before{
+/* .r-sidebar .category ul li::before{
+    content: '\1F4C1';
+} */
+/* wordpress defult categoris */
+.r-sidebar .category ul::before{
     content: '\1F4C1';
 }
 .r-sidebar .category ul li{

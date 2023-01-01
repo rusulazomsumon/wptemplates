@@ -201,3 +201,5 @@
             register_post_type( 'project', $args );
     }
     add_action('init','rasfolio_projects');
+
+    
