@@ -169,6 +169,16 @@
                   </div>
                   <!-- Author info area -->
                   <div class="blog-author-info col-9">
+                  <?php
+                    // Get the author's ID
+                    $author_id = get_the_author_meta('ID');
+                    // Get the author's profile URL
+                    $author_url = get_author_posts_url($author_id);
+                  ?>
+
+                  <!-- Create a link to the author's archive page -->
+                  <a href="<?php echo esc_url($author_url); ?>">View More Posts by <?php the_author(); ?></a>
+
                     <a href="#"><h4>মোঃ রউসুল আজম</h4></a>
                     <p>ভালবাশি লিখতে! বাংলা ভাষায় প্রোগ্রামিং ও প্রযুক্তি  বিদ্যা ছড়িয়ে দিতে এই খুদ্র প্রচেষ্টা। 
                       <a href="#"></a>
