@@ -12,6 +12,10 @@
           <!-- #############left sidebar Main Content##########-->
           <div class="col-md-8 col-12 single-post ">
             <div class="post-thumnil">
+            <?php 
+                      if ( have_posts() ) : 
+                        while ( have_posts() ) : the_post(); ?>
+
               <img src="<?php echo get_the_post_thumbnail_url(); ?>" width="100%" height="50%" alt="">
             </div>
 
@@ -23,17 +27,10 @@
               <!-- Post author icon -->
               <div class="col-md-4 col-sm-12 d-flex">
                 <a href="#">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assect/img/rusulazomsumonProthomalo.png" width="24px" height="24px" class="rounded-circle" alt="Rusul Azom Sumon">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assect/img/rusulazomsumonProthomalo.png" width="16px" height="16px" class="rounded-circle pl-3" alt="Rusul Azom Sumon">
                 </a>
                 <!-- author name linked -->
-                <?php
-                  $author_id = $post->post_author; 
-                  $author_url = get_the_author_meta('user_url',$author_id);
-                  $author_name =  get_the_author_meta('display_name', $author_id); 
-                ?>
-                <a href="<?php echo $author_url; ?>" class="pt-1">
-                  <p><?php echo $author_name; ?></p>
-                </a>
+                <?php _e( '', 'rasfolio' ); ?> <?php the_author_posts_link(); ?> 
               </div>
               <!-- date @ category -->
               <div class="col-md-8 col-sm-12 d-flex">
@@ -169,19 +166,21 @@
                   </div>
                   <!-- Author info area -->
                   <div class="blog-author-info col-9">
-                  <?php
-                    // Get the author's ID
-                    $author_id = get_the_author_meta('ID');
-                    // Get the author's profile URL
-                    $author_url = get_author_posts_url($author_id);
-                  ?>
 
-                  <!-- Create a link to the author's archive page -->
-                  <a href="<?php echo esc_url($author_url); ?>">View More Posts by <?php the_author(); ?></a>
-
-                    <a href="#"><h4>মোঃ রউসুল আজম</h4></a>
-                    <p>ভালবাশি লিখতে! বাংলা ভাষায় প্রোগ্রামিং ও প্রযুক্তি  বিদ্যা ছড়িয়ে দিতে এই খুদ্র প্রচেষ্টা। 
-                      <a href="#"></a>
+                    <!-- post author name description --> 
+                    
+                        <div class="post-author">
+                          <?php _e( '', 'rasfolio' ); ?> <b> <?php the_author_posts_link(); ?></b>
+                        
+                      <!-- <a href="#"><h4>মোঃ রউসুল আজম</h4></a> -->
+                      <p>ভালবাশি লিখতে! বাংলা ভাষায় প্রোগ্রামিং ও প্রযুক্তি  বিদ্যা ছড়িয়ে দিতে এই খুদ্র প্রচেষ্টা। 
+                        <a href="#"></a>
+                        </div>
+                        <?php 
+                          endwhile; 
+                        endif; 
+                        
+                    ?>
                     <!-- social share icons -->
 
                     <div class="socil-icons">
