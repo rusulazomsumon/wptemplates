@@ -5,6 +5,14 @@
 @import url('https://fonts.googleapis.com/css?family=Atma');
 /* https://fonts.shahid.pro/ */
 
+.notification-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
 p,a{
     text-decoration: none !important;
     font-family: 'Atma','charukolaultralight', Arial, sans-serif !important;

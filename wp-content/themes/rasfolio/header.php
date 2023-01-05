@@ -114,3 +114,29 @@
     </section>
     <!-- header end -->
     </header>
+
+    <div class="notification-banner">
+  <img src="<?php echo get_template_directory_uri(); ?>/assect/img/ra sumon old pfofd.jpg" alt="Notification banner">
+  <div class="notification-banner-buttons">
+    <a href="#" class="button close">Close</a>
+  </div>
+</div>
+
+<script>
+  document.addEventListener( 'DOMContentLoaded', function() {
+    // get the close button
+    var closeButton = document.querySelector( '.notification-banner .close' );
+    
+    // add a click event listener to the close button
+    closeButton.addEventListener( 'click', function( event ) {
+      // prevent the default action of the button
+      event.preventDefault();
+      
+      // get the notification banner
+      var banner = document.querySelector( '.notification-banner' );
+      
+      // hide the banner
+      banner.style.display = 'none';
+    });
+  });
+</script>
