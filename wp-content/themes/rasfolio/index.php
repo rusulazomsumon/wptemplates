@@ -52,7 +52,7 @@
 
       <!-- #####################Notification Banner################### -->
         <div class="notification-banner">
-          <img src="<?php echo get_template_directory_uri(); ?>/assect/img/otw.png" alt="Notification banner">
+          <img src="<?php echo get_template_directory_uri(); ?>/assect/img/otw.png" height="50%" width="auto" alt="Notification banner">
           <div class="notification-banner-buttons">
             <a href="#" class="button close">Open CV</a>
             <a href="#" class="button close">Close</a>
