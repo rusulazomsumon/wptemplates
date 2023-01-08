@@ -20,6 +20,8 @@
         <!-- Display the author's name and bio -->
         <h1 style="color: red;"><?php echo esc_html($author->display_name); ?></h1>
         <p><?php echo esc_html($author->user_description); ?></p>
+        <!-- Life Histro of Rusul Azom Sumon in details story: add menually -->
+
       </div>
     </div>
   </div>
