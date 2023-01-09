@@ -22,6 +22,7 @@
         <p><?php echo esc_html($author->user_description); ?></p>
         <!-- Life Histro of Rusul Azom Sumon in details story: add menually -->
 
+        <h1>Biography<h1>
       </div>
     </div>
   </div>
