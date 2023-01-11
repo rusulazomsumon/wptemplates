@@ -60,7 +60,7 @@
             </div>
             <div class="notification-banner-buttons">
               <a href="#" class="button opnCv">Open CV</a>
-              <a href="#" class="button mail">Send Mail</a>
+              <a href = "mailto: rusulazomsumon@gmail.com">Send Email</a>
             </div>
           </div>
           <!-- close button -->
