@@ -5,13 +5,14 @@
 @import url('https://fonts.googleapis.com/css?family=Atma');
 /* https://fonts.shahid.pro/ */
 
+/* notification banner */
 .notification-banner {
     position: fixed;
     top: 10%;
     left: 20%;
     z-index: 999;
     width: auto;
-    height: 50%;
+    height: auto;
     border: 2px solid #C6C5B9;
     border-radius: 10px 20px 10px 20px;
     box-shadow: 5px 5px 10px #ccc;
@@ -22,6 +23,11 @@
   .notification-banner .banner-text {
     width: 100%;
     height: 80%;
+    padding: 10px;
+  }
+
+.notification-banner .notification-banner-buttons{
+    padding: 10px;
   }
 
   .notification-banner .close {
@@ -29,6 +35,8 @@
     margin-top: -20px;
     
   }
+
+
 
 p,a{
     text-decoration: none !important;
