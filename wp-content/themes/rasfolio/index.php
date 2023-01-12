@@ -51,7 +51,7 @@
     <!-- intro area end -->
 
       <!-- #####################Notification Banner################### -->
-      <div class="notification-banner">
+      <div class="notification-banner text-center">
         <!-- banner texts -->
           <div class="text-area">
             <div class="banner-text">
