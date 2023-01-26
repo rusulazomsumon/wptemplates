@@ -56,10 +56,10 @@
           <div class="text-area">
             <div class="banner-text">
               <h1>Open To Work</h1>
-              <p>I'm Lokking for a Internship as a WordPress Developer/PHP Junior Developer</p>
+              <p>As a junior WordPress PHP developer, I bring expertise in HTML, CSS, PHP, JavaScript and WordPress development. I have a strong attention to detail, and experience with creating custom themes and plugins. My knowledge of DBMS, MIS, System Design, and SDLC, enables me to design and develop robust systems. I am a graduate in Computer Engineering and have a passion for problem-solving, troubleshooting, and delivering efficient solutions. I am an enthusiastic and hardworking individual who is eager to bring my skills and education to your company.</p>
             </div>
             <div class="notification-banner-buttons">
-              <a href="#" class="button opnCv">Open CV</a>
+              <a href="https://drive.google.com/file/d/1qkPv75DSNmP8PSw9ZbTOmGYGKLIRS37K/view?usp=sharing" target="_blank" class="button opnCv">Open CV</a>
               <a href = "mailto: rusulazomsumon@gmail.com">Send Email</a>
             </div>
           </div>
@@ -94,7 +94,7 @@
           setTimeout(function() {
             var banner = document.querySelector( '.notification-banner' );
             banner.style.display = 'none';
-          }, 10000);
+          }, 20000);
         });
       </script>
 
@@ -210,7 +210,8 @@
                         $button_link = get_field('button_url', 'option');
                     ?>
               <a href="<?php echo $button_link ?>">
-                <button class="btn"><?php echo $button_text; ?></button>
+              <!-- <button class="btn"><?php echo $button_text; ?></button> -->
+                <button class="btn">বিস্তারিত</button>
               </a>
             </div>
             </div>
