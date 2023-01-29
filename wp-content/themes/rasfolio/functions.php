@@ -188,7 +188,7 @@
                 'rewrite'            => array( 'slug' => 'project' ),
                 'capability_type'    => 'post',
                 'menu_position'       => 6,
-                'menu_icon'           => 'dashicons-analytics',
+                'menu_icon'           => 'dashicons-portfolio',
                 'has_archive'        => true,
                 'hierarchical'       => false,
                 'menu_position'      => null,
