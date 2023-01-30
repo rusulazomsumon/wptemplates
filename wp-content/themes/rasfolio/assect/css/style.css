@@ -50,7 +50,7 @@
     border-radius: 10px;
   }
 
-
+/* notification end */
 
 p,a{
     text-decoration: none !important;
@@ -484,8 +484,9 @@ footer {
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Blog Single Page@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Blog Single Page@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Blog Single Page@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-.single-post h3 {
-    color: #0f0e01;
+
+.single-post h1,h2,h3 {
+    color: #0f0e01 !important;
     font-weight: 700;
 }
 .single-post p,a{
