@@ -56,7 +56,7 @@
           <div class="text-area">
             <div class="banner-text">
               <h1>Open To Work</h1>
-              <p>As a junior WordPress PHP developer, I bring expertise in HTML, CSS, PHP, JavaScript and WordPress development. I have a strong attention to detail, and experience with creating custom themes and plugins. My knowledge of DBMS, MIS, System Design, and SDLC, enables me to design and develop robust systems. I am a graduate in Computer Engineering and have a passion for problem-solving, troubleshooting, and delivering efficient solutions. I am an enthusiastic and hardworking individual who is eager to bring my skills and education to your company.</p>
+              <p>I am a junior WordPress PHP developer with expertise in HTML, CSS, PHP, JavaScript, WordPress development, DBMS, MIS, System Design, and SDLC. I have a strong attention to detail and experience creating custom themes and plugins. I have a Computer Engineering degree, and a passion for problem-solving, troubleshooting, and delivering efficient solutions. I am eager to use my skills and education to benefit your company.</p>
             </div>
             <div class="notification-banner-buttons">
               <a href="https://drive.google.com/file/d/1Fbo9_3EGH_PAyXF864kd77mLwZ6hm6Gh/view?usp=sharing" target="_blank" class="button opnCv">Open CV</a>
