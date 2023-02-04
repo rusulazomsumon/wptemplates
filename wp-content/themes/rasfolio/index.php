@@ -114,7 +114,7 @@
           <?php 
                 $args = array(
                     'post_type'     =>  'post',
-                    'order'         =>  'DSC',
+                    'order'         =>  'ASC',
                     'posts_per_page' =>  8
                  );
                 $query = new WP_Query($args);
@@ -186,7 +186,7 @@
            <?php 
                 $args = array(
                     'post_type'     =>  'service',
-                    'order'         =>  'DSC',
+                    'order'         =>  'ASC',
                     'posts_per_page' =>  6
                  );
                 $query = new WP_Query($args);
@@ -347,7 +347,7 @@
                 <?php 
                       $args = array(
                           'post_type'     =>  'project',
-                          'order'         =>  'ASC',
+                          'order'         =>  'DSC',
                           'posts_per_page' =>  6
                       );
                       $query = new WP_Query($args);
