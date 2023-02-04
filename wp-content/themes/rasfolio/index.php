@@ -108,6 +108,9 @@
           <div class="col-lg-12 blog-area">
               <div class="section-tittle pt-5 text-center">
                   <h1 class="heading">বিছিন্ন ভাবনাগুলি</h1>
+                  <?php 
+                    do_action('bolg_ttl_des');
+                  ?>
               </div>
           </div>
           <!-- content sourcing -->

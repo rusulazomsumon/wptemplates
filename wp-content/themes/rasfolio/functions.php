@@ -202,4 +202,10 @@
     }
     add_action('init','rasfolio_projects');
 
+    // custom hooks for blog section title after
+    add_action('bolg_ttl_des','blgTtlDes');
+    function blgTtlDes(){
+        echo "<P>ভালবাশি শিখতে আর লিখতে! তারই কিছু আপনাদের জন্য</p>";
+    }
+
     
