@@ -208,4 +208,20 @@
         echo "<P>ভালবাশি শিখতে আর লিখতে! তারই কিছু আপনাদের জন্য</p>";
     }
 
+
+    //@@@@@@@@@@@@@@@@@@@@@ short code @@@@@@@@@@@@@@@@@@@@@
+    // Random Quotes
+
+    // add_shortcode('rndQuote', 'random_Quote');
+
+    // function random_Quote($atts){ 
+    //     ?>
+
+    //     <p>Here Quotes will show! </p>
+
+    //     <?php
+    // }
+
+
+
     

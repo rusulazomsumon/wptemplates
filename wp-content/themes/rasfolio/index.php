@@ -501,6 +501,10 @@
               </svg>
             </a>
             <!-- Icon area end -->
+
+            <!-- <div class="randQuote">
+              [rndQuote]
+            </div> -->
           </div>
         </div>
       </div>
