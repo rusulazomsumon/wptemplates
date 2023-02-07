@@ -490,7 +490,7 @@ footer {
     font-weight: 700;
 }
 .single-post p,a{
-    color: #393D3F;
+    color: #333333 !important;
 }
 /* post icon area */
 .single-post .pub-date {
