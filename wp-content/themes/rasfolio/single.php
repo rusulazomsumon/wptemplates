@@ -209,6 +209,7 @@
 
 
               <!-- @@@@@@@@Related post area start@@@@@@@@@@@ -->
+              <!-- ToDo: shift this into separate sidebar, automated all content -->
               <div class="related-post">
                 <div class="row d-flex mt-3">
                   <h5>এই জাতীয় আরও লেখাঃ-</h5>
@@ -250,6 +251,8 @@
           
 
           <!-- ***************Right Sideber**************** -->
+                        <!-- ToDo: shift this into separate sidebar, automated all content -->
+
           <div class="col-md-4 col-12 p-5 r-sidebar con-box">
             <!-- Author profile -->
             <h3>আমার সম্পর্কে!</h3>
